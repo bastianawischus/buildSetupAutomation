@@ -10,10 +10,15 @@ import zipfile
 #from shutil import rmtree
 
 def unZipBinaries():
+    #unzip all
+    #delete zip files
+    return
+    
+def prepareFilesForDeploy():
     return
 
 unZipBinaries()
-
+prepareFilesForDeploy()
 
 
 
