@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "is_enabled": true,
+    "code": "CBM",
+    "icon": "ContentSetType_Broadcast.png",
+    "family_name": "BROADCASTMEDIA",
+    "ui_title": "Broadcast Media",
+    "supported_media_categories": "PRAM,BGM,VA,Decompression,NoSmoking,FastenSeatBelts",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 4,
+    "is_enabled": true,
+    "code": "CCM",
+    "icon": "ContentSetType_CabinMessages.png",
+    "family_name": "CREW TEXT MESSAGES",
+    "ui_title": "Cabin Messages",
+    "supported_media_categories": "Messages",
+    "display_cabin_messaging_parameters": true,
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 12,
+    "is_enabled": true,
+    "code": "CGS",
+    "icon": "ContentSetType_GameServer.png",
+    "family_name": "GAME SERVER",
+    "ui_title": "Game Server",
+    "supported_media_categories": "GameServer",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 11,
+    "is_enabled": true,
+    "code": "COF",
+    "icon": "ContentSetType_IFEOff.png",
+    "family_name": "CUSTOM IFE OFF",
+    "ui_title": "IFE OFF",
+    "supported_media_categories": "IFEOff",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 10,
+    "is_enabled": true,
+    "code": "CMM",
+    "icon": "ContentSetType_MovingMap.png",
+    "family_name": "MOVING MAP",
+    "ui_title": "Moving Map",
+    "supported_media_categories": "MovingMap",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 2,
+    "is_enabled": true,
+    "code": "CSV",
+    "icon": "ContentSetType_Survey.png",
+    "family_name": "SURVEY",
+    "ui_title": "Survey",
+    "supported_media_categories": "PaxSurvey",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 3,
+    "is_enabled": true,
+    "code": "CTH",
+    "icon": "ContentSetType_Theme.png",
+    "family_name": "THEMES",
+    "ui_title": "Themes",
+    "supported_media_categories": "Theme",
+    "identifier_file_name": "RaveMedia_Resident"
+  },
+  {
+    "id": 14,
+    "is_enabled": true,
+    "code": "IFS",
+    "icon": "ContentSetType_IfeScreen.png",
+    "family_name": "IfeScreen",
+    "ui_title": "IFE Screen",
+    "supported_media_categories": "IfeScreen",
+    "identifier_file_name": "RaveMedia_Resident"
+  }
+]

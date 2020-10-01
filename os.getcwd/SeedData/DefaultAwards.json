@@ -1,0 +1,30 @@
+[
+  {
+    "name": "No_Awards",
+    "include_in_seed": false
+  },
+  {
+    "name": "Oscar®",
+    "include_in_seed": false
+  },
+  {
+    "name": "Grammy®",
+    "include_in_seed": false
+  },
+  {
+    "name": "Palme d'Or®",
+    "include_in_seed": false
+  },
+  {
+    "name": "BAFTA®",
+    "include_in_seed": false
+  },
+  {
+    "name": "THE GOLDEN BEAR®",
+    "include_in_seed": false
+  },
+  {
+    "name": "M1 Music Awards®",
+    "include_in_seed": false
+  }
+]

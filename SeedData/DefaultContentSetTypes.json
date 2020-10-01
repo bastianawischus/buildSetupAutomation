@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "is_main_cyclic": true,
+    "is_enabled": true,
+    "code": "CSC",
+    "platforms": "Remix,Wireless,Rave2020",
+    "icon": "ContentSetType_Cyclic.png",
+    "family_name": "StandardCycleContent",
+    "ui_title": "Cyclic",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  },
+  {
+    "id": 5,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "CVN",
+    "platforms": "Remix",
+    "icon": "ContentSetType_VideoNews.png",
+    "family_name": "VideoNews",
+    "ui_title": "Video News",
+    "supported_media_categories": "Movie",
+    "supported_apps": "News",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  },
+  {
+    "id": 6,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "CDC",
+    "platforms": "Remix",
+    "icon": "ContentSetType_DailyContent.png",
+    "family_name": "Daily Content",
+    "ui_title": "Daily Content",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  },
+  {
+    "id": 7,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "CDA",
+    "platforms": "Remix",
+    "icon": "ContentSetType_DailyAds.png",
+    "family_name": "DailyAds",
+    "ui_title": "Daily Ads",
+    "supported_media_categories": "Advertisement",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage,DailySetsStorage"
+  },
+  {
+    "id": 8,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "CXA",
+    "platforms": "Remix",
+    "icon": "ContentSetType_Catalog.png",
+    "family_name": "Additional Content A",
+    "ui_title": "Additional Content A",
+    "supported_media_categories": "Catalog",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  },
+  {
+    "id": 9,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "CAP",
+    "platforms": "Remix",
+    "icon": "ContentSetType_ADP.png",
+    "family_name": "adp",
+    "ui_title": "ADP",
+    "is_self_contained_content_set": true,
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  },
+  {
+    "id": 13,
+    "is_main_cyclic": false,
+    "is_enabled": true,
+    "code": "WMC",
+    "platforms": "Remix,Wireless,Rave2020",
+    "icon": "ContentSetType_DailyContent.png",
+    "family_name": "MenuConfig",
+    "ui_title": "Menu and Homescreen",
+    "supported_media_categories": "Homescreen,MenuConfig",
+    "identifier_file_name": "RaveMedia_Cyclic",
+    "publish_Outputs": "MainStorage"
+  }
+]
