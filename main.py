@@ -43,20 +43,23 @@ def prepare_files_for_deploy():
                     print('hey')
                     #os.remove(os.path.join(buildSourceBinaryFilesPath, file))
 
-        elif item == 'RIM_CMS_v52':
-            print('RIM_CMS_v52')
+        # elif item == 'RIM_CMS_v52':
+        #     print('RIM_CMS_v52')
 
-        elif item == 'RIM_ContentSetPublish_v52':
-            print('RIM_ContentSetPublish_v52')
+        # elif item == 'RIM_ContentSetPublish_v52':
+        #     print('RIM_ContentSetPublish_v52')
 
 def remove_zip_files():
+    try:
         for file in os.listdir(buildSourceBinaryFilesPath):
             if file.endswith('.zip'):
-            os.remove(os.path.join(buildSourceBinaryFilesPath, file))
-
+                os.remove(os.path.join(buildSourceBinaryFilesPath, file))
+    except:
+        print('Can not remove .zip files')
+        
 #unZip_Binaries()
-#remove_zip_files
-prepare_files_for_deploy()
+remove_zip_files()
+#prepare_files_for_deploy()
 
 
 
