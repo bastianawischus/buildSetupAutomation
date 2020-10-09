@@ -22,16 +22,16 @@ def get_binaries_from_TC():
     pass
 
 def unZip_Binaries():
-    # 1. Check that directory has correct binaries
-    # 2. unzip all OR get binaries from TC and unzip
-    # 3. delete zip files
-    zipList = ['cms.mediasuite.rim_52.zip','RIM_CMS_v52.zip','RIM_ContentSetPublish_v52.zip']
-    # Need to be able to parse these with only containing mediasuite, CMS , ContentSetPublish
-
-    for name in zipList:
-        with zipfile.ZipFile(Path(os.getcwd() + "/buildSourceBinaryFiles/" + name),"r") as zip_ref: #The file path is not working with this.
-            zip_ref.extractall(Path(os.getcwd() + "/buildSourceBinaryFiles/" + name.replace('.zip','')))
-            # This needs to be update to remove the hardcoded names and instead parse for the names
+    buildSourceBinaryPath = Path(os.getcwd() + "/buildSourceBinaryFiles/")
+    zipLIST = os.listdir(buildSourceBinaryPath)
+    try:
+        for name in zipLIST:
+            with zipfile.ZipFile(Path(os.getcwd() + "/buildSourceBinaryFiles/" + name),"r") as zip_ref: #The file path is not working with this.
+                zip_ref.extractall(Path(os.getcwd() + "/buildSourceBinaryFiles/" + name.replace('.zip','')))
+                # This needs to be update to remove the hardcoded names and instead parse for the names
+    except:
+        print("zip files are missing in folder")
+        
 def remove_zip_files():
     try:
         for file in os.listdir(buildSourceBinaryFilesPath):
@@ -53,26 +53,8 @@ def prepare_files_for_deploy():
 
         elif item == 'RIM_CMS_v52':
             cmsPath = str(buildSourceBinaryFilesPath) + "/" + item
-            #print(item)
-            #print(os.listdir(cmsPath))
-            #os.chdir(cmsPath + "/" + "ingestservice")
-            #copy(cmsPath + "/" + "ingestservice/",buildSourceBinaryFilesPath )
-            #copytree(cmsPath + "/" + "ingestservice/",buildSourceBinaryFilesPath )
-            # 1. Go into RIM_CMS_v52 -> Ingestservices -> publications
-            # 2. Copy content back two directories
-            # 3. Remove ingestservices
-           
-            tmpList = os.listdir(cmsPath + "/ingestservice/publications/")
-            #newPath = cmsPath + "/ingestservice/publications/"
-            #print(tmpList)
-            #print(newPath)
-            #print(cmsPath)
-            copytree(cmsPath + "/ingestservice/publications/", cmsPath + "new")
-        
-            #os.remove(os.path.join(cmsPath + "/ingestservice", i))
-        else:
-            return
-            #keep this line or fnction does not work
+            copytree(cmsPath + "/ingestservice/publications/", cmsPath + "_tmp")
+            shutil.rmtree(os.path.join(buildSourceBinaryFilesPath, item)) #This is done for WINDOWS
 
 def rename_folders():
     localList = os.listdir(buildSourceBinaryFilesPath)
@@ -80,21 +62,14 @@ def rename_folders():
     for item in localList:
         if item == 'cms.mediasuite.rim_52':
             os.rename(item,'mediasuite')
-        elif item == 'RIM_CMS_v52':
+        elif item == 'RIM_CMS_v52_tmp':
             os.rename(item,'CMS')
         elif item == 'RIM_ContentSetPublish_v52':
             os.rename(item,'ContentSetPublish')
 
 #get_binaries_from_TC()
 
-#unZip_Binaries()
-
-#remove_zip_files()
-
+unZip_Binaries()
+remove_zip_files()
 prepare_files_for_deploy()
-
-#rename_folders()
-
-
-
-
+rename_folders()
